@@ -1,0 +1,148 @@
+---
+---
+<form
+  class="contact-form"
+  id="contact-form"
+  method="POST"
+  action="PASTE-YOUR-POWER-AUTOMATE-HTTP-URL-HERE"
+>
+  <div class="grid">
+    <label>
+      <span>Name</span>
+      <input type="text" name="Name" required autocomplete="name" />
+    </label>
+    <label>
+      <span>Company</span>
+      <input type="text" name="Company" required autocomplete="organization" />
+    </label>
+    <label>
+      <span>Email</span>
+      <input type="email" name="Email" required autocomplete="email" />
+    </label>
+    <label>
+      <span>Phone <em>(optional)</em></span>
+      <input type="tel" name="Phone" autocomplete="tel" />
+    </label>
+    <label>
+      <span>Fleet size</span>
+      <input type="text" name="FleetSize" placeholder="e.g. 250 vehicles" required />
+    </label>
+    <label>
+      <span>Service interested in</span>
+      <select name="ServiceInterestedIn" required>
+        <option value="" disabled selected>Choose one</option>
+        <option value="Toll Account Management">Toll Account Management</option>
+        <option value="DVS Management">DVS Management</option>
+        <option value="Both">Both</option>
+        <option value="Not sure yet">Not sure yet</option>
+      </select>
+    </label>
+  </div>
+
+  <label class="full">
+    <span>Message</span>
+    <textarea name="Message" rows="4" required placeholder="Tell us a bit about your fleet and what you need"></textarea>
+  </label>
+
+  <div class="submit-row">
+    <button type="submit" class="btn btn-primary">Get in touch</button>
+    <p class="response-note">We aim to respond within 2 business days.</p>
+  </div>
+
+  <p class="form-status" aria-live="polite"></p>
+</form>
+
+<style>
+  .contact-form {
+    background: var(--cream-soft);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    padding: 36px;
+    box-shadow: var(--shadow-soft);
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  label {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--ink-soft);
+  }
+  label.full { margin-bottom: 24px; }
+  label em { font-weight: 400; font-style: normal; color: #9a9382; }
+
+  input, select, textarea {
+    font-family: var(--font-body);
+    font-size: 15px;
+    padding: 11px 14px;
+    border-radius: var(--radius-sm);
+    border: 1.5px solid var(--line);
+    background: #fff;
+    color: var(--ink);
+  }
+  input:focus, select:focus, textarea:focus {
+    outline: 3px solid #B06B4555;
+    outline-offset: 1px;
+    border-color: var(--terracotta);
+  }
+  textarea { resize: vertical; }
+
+  .submit-row {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+  .response-note {
+    font-size: 14px;
+    color: var(--ink-soft);
+  }
+  .form-status {
+    margin-top: 14px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  @media (max-width: 640px) {
+    .contact-form { padding: 24px; }
+    .grid { grid-template-columns: 1fr; }
+  }
+</style>
+
+<script>
+  // Progressive enhancement: submit via fetch so we can show a friendly
+  // inline confirmation instead of a page reload / blank JSON response.
+  // Works with a Power Automate "When an HTTP request is received" trigger
+  // as the form action — see the SharePoint/Power Automate setup notes.
+  const form = document.getElementById('contact-form') as HTMLFormElement | null;
+  const status = form?.querySelector('.form-status') as HTMLElement | null;
+
+  form?.addEventListener('submit', async (e) => {
+    const action = form.getAttribute('action') || '';
+    if (!action || action.startsWith('PASTE-')) {
+      // No endpoint configured yet — let it fail loudly in dev rather than pretend to work.
+      return;
+    }
+    e.preventDefault();
+    const data = Object.fromEntries(new FormData(form).entries());
+    if (status) { status.textContent = 'Sending…'; status.style.color = 'var(--ink-soft)'; }
+    try {
+      const res = await fetch(action, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+      if (!res.ok) throw new Error('Request failed');
+      form.reset();
+      if (status) { status.textContent = "Thanks — we'll be in touch within 2 business days."; status.style.color = 'var(--green-deep)'; }
+    } catch (err) {
+      if (status) { status.textContent = "Something went wrong sending that — please try again or email us directly."; status.style.color = 'var(--terracotta-dark)'; }
+    }
+  });
+</script>

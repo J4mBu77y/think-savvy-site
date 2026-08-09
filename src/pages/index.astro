@@ -1,0 +1,489 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import DuckHero from '../components/DuckHero.astro';
+import ContactForm from '../components/ContactForm.astro';
+---
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Think Savvy — Fleet data, sorted</title>
+  <meta name="description" content="Think Savvy manages toll accounts and Direct Vision Standard compliance for large UK fleets — so your team can focus on running the business." />
+  <link rel="icon" href="/logo.jpg" />
+</head>
+<body id="top">
+  <Header />
+
+  <!-- HERO -->
+  <section class="hero">
+    <DuckHero />
+    <div class="hero-scrim"></div>
+    <div class="wrap hero-inner">
+      <p class="eyebrow eyebrow-light">Fleet data specialists</p>
+      <h1 class="hero-headline">Quiet execution.<br />Visible results.</h1>
+      <p class="hero-tagline">We handle the data. You handle the business.</p>
+      <p class="hero-sub">
+        Think Savvy transforms complex fleet data into robust, controlled managed processes
+        at scale. Keeping busy Fleet Operators compliant and moving.
+      </p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Get in touch</a>
+        <a href="#services" class="btn btn-ghost btn-ghost-light">See what we do</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STORY -->
+  <section id="story" class="story">
+    <div class="wrap story-inner">
+      <p class="eyebrow">Our story</p>
+      <h2>Why Think Savvy exists</h2>
+      <div class="story-copy">
+        <p>
+          Think Savvy was born out of necessity — to ensure business-critical processes,
+          particularly those carrying significant financial consequences, could be managed
+          easily, accurately and consistently at scale.
+        </p>
+        <p>
+          We've seen first-hand how quickly fragmented processes can spiral. Incurring
+          avoidable financial costs, unnecessary administrative burden and swallowing up
+          valuable people-time, without really addressing the core issue.
+        </p>
+        <p>So we built a better way.</p>
+        <p>
+          Think Savvy combines nearly a decade of industry knowledge and specialist
+          experience with purpose-built technology to implement targeted data-driven
+          solutions for complex fleet challenges. We deliver a proven, robust, streamlined
+          managed-process model that help fleet operators stay in control of the costs,
+          compliance and operational requirements that drive their day-to-day business.
+        </p>
+        <p>
+          Think Savvy's solutions can support any business operating a fleet of vehicles —
+          from owner-operators and growing fleets to the UK's leading logistics firms. We
+          scale with your needs.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST / PROBLEM-SOLUTION STRIP -->
+  <section class="strip">
+    <div class="wrap strip-inner">
+      <p class="strip-line"><strong>We turn complex data</strong> into controlled, automated processes.</p>
+      <p class="strip-line"><strong>A smarter way to manage operational complexity</strong> — software-led, service-backed.</p>
+      <p class="strip-line"><strong>Scalable by technology.</strong> Supported by people.</p>
+    </div>
+  </section>
+
+  <!-- SERVICES OVERVIEW -->
+  <section id="services" class="services">
+    <div class="wrap">
+      <p class="eyebrow">What we do</p>
+      <h2>Services we offer</h2>
+      <p class="section-lead">
+        Below are some of our most popular flagship offerings. If you have any other bespoke
+        fleet data requirements, please contact us using the 'Get in touch' contact form at
+        the bottom of the page.
+      </p>
+
+      <div class="service-cards">
+        <a href="#toll-management" class="service-card">
+          <span class="service-tag">Flagship service</span>
+          <h3>Toll Account Management</h3>
+          <p>Your vehicles, always correctly set up and aligned across every toll scheme — without anyone on your team lifting a finger.</p>
+          <span class="card-link">Learn more →</span>
+        </a>
+        <a href="#dvs-management" class="service-card">
+          <span class="service-tag">Compliance</span>
+          <h3>DVS Management</h3>
+          <p>Direct Vision Standard applications and compliance, handled at scale for fleets operating in and around London.</p>
+          <span class="card-link">Learn more →</span>
+        </a>
+        <a href="#notifications" class="service-card">
+          <span class="service-tag">Communication</span>
+          <h3>Bespoke Fleet Notifications</h3>
+          <p>The right fleet data, delivered to the right person, at the right time — tailored notifications across tolls, CAZ, Scottish LEZ and DVS.</p>
+          <span class="card-link">Learn more →</span>
+        </a>
+        <a href="#bespoke-solutions" class="service-card">
+          <span class="service-tag">Custom</span>
+          <h3>Bespoke Solutions</h3>
+          <p>Bespoke fleet solutions built around the data, processes and challenges unique to your operation.</p>
+          <span class="card-link">Learn more →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOLL DETAIL -->
+  <section id="toll-management" class="detail detail-a">
+    <div class="wrap detail-inner">
+      <div class="detail-copy">
+        <p class="eyebrow">Toll Account Management</p>
+        <h2>The admin no one on your team wants to own.</h2>
+        <p>
+          Toll accounts fall out of alignment quietly — a new vehicle here, a decommissioned
+          one there — and the fines rack up fast when they do. We manage the whole process
+          for you: keeping every vehicle correctly registered, accounted for, and compliant
+          across the toll schemes your fleet uses.
+        </p>
+        <p>
+          It's a risk-mitigating service as much as an administrative one. Get it wrong and
+          it costs you. Hand it to us, and it's simply not something you have to think about
+          again.
+        </p>
+        <ul class="check-list">
+          <li>Vehicles kept correctly aligned across toll accounts, continuously</li>
+          <li>Fewer avoidable fines from lapsed or misaligned registrations</li>
+          <li>One less administrative burden on a team you'd rather use elsewhere</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- DVS DETAIL -->
+  <section id="dvs-management" class="detail detail-b">
+    <div class="wrap detail-inner detail-inner-reverse">
+      <div class="detail-copy">
+        <p class="eyebrow">DVS Management</p>
+        <h2>Direct Vision Standard, handled at scale.</h2>
+        <p>
+          Operating in or around London? Non-compliance with the Direct Vision Standard carries
+          a fine of <strong>£500 per vehicle, per instance</strong> — a real and recurring risk
+          for any fleet running in the M25 zone.
+        </p>
+        <p>
+          We manage the DVS application process for large fleets — bulk vehicle uploads,
+          tracking which vehicles need Progressive Safe System (PSS) proof of fitment from
+          your fitting partners, and keeping your compliance status current as your fleet changes.
+        </p>
+        <p class="detail-note">
+          Scope depends on fleet size and vehicle mix — we're happy to talk through what's
+          involved for your fleet specifically.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOTIFICATIONS DETAIL -->
+  <section id="notifications" class="detail detail-a">
+    <div class="wrap detail-inner">
+      <div class="detail-copy">
+        <p class="eyebrow">Bespoke Fleet Notifications</p>
+        <h2>The right data, to the right people, at the right time.</h2>
+        <p>
+          Alongside our core services, we set up tailored notifications covering vehicle
+          compliance across tolls, CAZ, Scottish LEZ and DVS — so the people who need to
+          know, know, without having to go looking for it.
+        </p>
+        <p>
+          We also provide email notifications across a range of verticals, so key
+          stakeholders get the information that matters to them without the noise.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BESPOKE SOLUTIONS DETAIL -->
+  <section id="bespoke-solutions" class="detail detail-b">
+    <div class="wrap detail-inner detail-inner-reverse">
+      <div class="detail-copy">
+        <p class="eyebrow">Bespoke Solutions</p>
+        <h2>Built around your fleet, not a template.</h2>
+        <p>
+          Our expertise extends beyond our core services. We design and deliver bespoke
+          solutions for a wide range of fleet management requirements — from GOV APIs and
+          vehicle information services to slippage notifications, O' Licence management,
+          vehicle margin alerts and VTG plating certificates.
+        </p>
+        <p>
+          If you have a fleet data or process challenge that isn't covered here, we'd love
+          to hear about it.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how-it-works" class="how">
+    <div class="wrap">
+      <p class="eyebrow">Getting started</p>
+      <h2>How it works</h2>
+      <div class="steps">
+        <div class="step">
+          <span class="step-num">01</span>
+          <h3>Share the basics</h3>
+          <p>Vehicle registration numbers — we'll let you know what additional vehicle or account information we need for your specific requirements, plus your existing toll account details if you already have one set up.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">02</span>
+          <h3>Pilot &amp; integration</h3>
+          <p>We run an initial pilot to test and integrate your fleet data into our processes, ironing out anything specific to your setup.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">03</span>
+          <h3>We take it from here</h3>
+          <p>Ongoing management begins — your team steps back, and the data stays aligned in the background.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCALE / TRUST -->
+  <section class="trust">
+    <div class="wrap trust-inner">
+      <div class="trust-item">
+        <h3>Built for scale</h3>
+        <p>Both services are built to handle large, complex fleets — the bigger the operation, the more we can take off your plate.</p>
+      </div>
+      <div class="trust-item">
+        <h3>Specialist focus</h3>
+        <p>We specialize in fleet data — toll accounts and vehicle compliance, done properly, not as an add-on to something else.</p>
+      </div>
+      <div class="trust-item">
+        <h3>Your team, freed up</h3>
+        <p>Less time spent administering vehicles, more time spent on the parts of the business only your team can do.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <div class="wrap contact-inner">
+      <div class="contact-copy">
+        <p class="eyebrow">Get in touch</p>
+        <h2>Let's take fleet data off your hands.</h2>
+        <p>
+          Tell us a bit about your fleet and what's currently taking up your team's time —
+          we'll come back to you within 2 business days.
+        </p>
+        <p class="contact-alt">
+          Prefer to talk it through? Leave a phone number in the message and we'll call you instead.
+        </p>
+      </div>
+      <ContactForm />
+    </div>
+  </section>
+
+  <Footer />
+
+  <style>
+    /* HERO — full-bleed animated scene with overlay text */
+    .hero {
+      position: relative;
+      min-height: min(86vh, 760px);
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      padding: 0;
+    }
+    .hero-scrim {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(43,46,40,0.15) 0%, rgba(43,46,40,0.55) 100%);
+      z-index: 1;
+    }
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 720px;
+    }
+    .eyebrow-light { color: #F0DCC8; }
+    .eyebrow-light::before, .eyebrow-light::after { background: #F0DCC8; }
+    .hero-headline {
+      font-size: clamp(2.4rem, 5vw, 4rem);
+      color: var(--cream-soft);
+      margin: 18px 0 14px;
+    }
+    .hero-tagline {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: clamp(1.1rem, 2vw, 1.4rem);
+      color: #E8DCC8;
+      margin-bottom: 18px;
+    }
+    .hero-sub {
+      font-size: 18px;
+      color: rgba(246,241,232,0.88);
+      max-width: 46ch;
+      margin-bottom: 30px;
+    }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+    .btn-ghost-light {
+      border-color: var(--cream-soft);
+      color: var(--cream-soft);
+    }
+    .btn-ghost-light:hover {
+      background: var(--cream-soft);
+      color: var(--green-deep);
+    }
+
+    /* STORY */
+    .story { background: var(--cream-soft); }
+    .story h2 { font-size: 2.1rem; margin: 12px 0 30px; }
+    .story-copy { max-width: 74ch; display: flex; flex-direction: column; gap: 16px; }
+    .story-copy p { color: var(--ink-soft); font-size: 16.5px; }
+    .story-emphasis {
+      color: var(--green-deep) !important;
+      font-weight: 500;
+      border-left: 3px solid var(--terracotta);
+      padding-left: 18px;
+    }
+
+    /* STRIP */
+    .strip {
+      padding: 44px 0;
+      background: var(--green-deep);
+    }
+    .strip-inner {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    .strip-line {
+      color: var(--cream-soft);
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    .strip-line strong { color: var(--terracotta); font-family: var(--font-display); }
+
+    /* SERVICES */
+    .services h2 { font-size: 2.2rem; margin-top: 10px; }
+    .section-lead {
+      color: var(--ink-soft);
+      font-size: 17px;
+      max-width: 56ch;
+      margin: 14px 0 44px;
+    }
+    .service-cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+    }
+    .service-cards a:nth-child(4) {
+      grid-column: 1 / -1;
+      max-width: calc(33.333% - 16px);
+    }
+    @media (max-width: 1000px) {
+      .service-cards a:nth-child(4) { max-width: none; }
+    }
+    .service-card {
+      display: block;
+      background: var(--cream-soft);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      text-decoration: none;
+      color: var(--ink);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-soft);
+    }
+    .service-tag {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--terracotta-dark);
+      background: #B06B451A;
+      padding: 4px 10px;
+      border-radius: 999px;
+      margin-bottom: 14px;
+    }
+    .service-card h3 { font-size: 1.4rem; margin-bottom: 10px; }
+    .service-card p { color: var(--ink-soft); margin-bottom: 18px; }
+    .card-link { font-weight: 700; color: var(--green-deep); }
+
+    /* DETAIL SECTIONS */
+    .detail-a { background: var(--cream-soft); }
+    .detail-inner { max-width: 760px; }
+    .detail-copy h2 { font-size: 2rem; margin: 14px 0 18px; }
+    .detail-copy p { color: var(--ink-soft); margin-bottom: 16px; font-size: 16px; }
+    .detail-note {
+      font-style: italic;
+      color: var(--green-deep) !important;
+    }
+    .check-list {
+      list-style: none;
+      padding: 0;
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .check-list li {
+      padding-left: 28px;
+      position: relative;
+      color: var(--ink);
+      font-weight: 500;
+    }
+    .check-list li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--terracotta);
+      font-weight: 700;
+    }
+
+    /* HOW IT WORKS */
+    .how h2 { font-size: 2.2rem; margin: 10px 0 44px; }
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    .step {
+      background: var(--cream-soft);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+    }
+    .step-num {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      color: var(--green-sage);
+      font-weight: 800;
+    }
+    .step h3 { margin: 10px 0 8px; font-size: 1.15rem; }
+    .step p { color: var(--ink-soft); font-size: 15px; }
+
+    /* TRUST */
+    .trust { background: var(--green-deep); }
+    .trust-inner {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+    .trust-item h3 {
+      color: var(--terracotta);
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+    .trust-item p { color: rgba(246,241,232,0.82); font-size: 15px; }
+
+    /* CONTACT */
+    .contact-inner {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 48px;
+      align-items: start;
+    }
+    .contact-copy h2 { font-size: 2rem; margin: 12px 0 16px; }
+    .contact-copy p { color: var(--ink-soft); font-size: 16px; margin-bottom: 12px; }
+    .contact-alt { font-size: 14px !important; font-style: italic; }
+
+    @media (max-width: 900px) {
+      .strip-inner, .service-cards, .steps, .trust-inner, .contact-inner {
+        grid-template-columns: 1fr;
+      }
+      .hero { min-height: 560px; }
+      .detail-inner-reverse { order: unset; }
+    }
+  </style>
+</body>
+</html>

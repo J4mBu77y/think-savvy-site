@@ -1,0 +1,40 @@
+---
+// Hero background: real footage of a mallard duck gliding on calm water.
+// Video by Alex Moliski, via Pexels (free to use, no attribution required —
+// https://www.pexels.com/video/close-up-of-a-mallard-duck-swimming-28903948/).
+//
+// Currently pointed at Pexels' CDN so it works immediately. For the live
+// site, download the file via the "Free download" button on that page,
+// save it as /public/hero-duck.mp4, and swap the src below to "/hero-duck.mp4"
+// — self-hosting is more reliable than relying on an external CDN long-term.
+const videoSrc = "https://videos.pexels.com/video-files/28903948/12511513_1920_1080_30fps.mp4";
+const poster = "https://images.pexels.com/videos/28903948/animal-duck-mallard-slow-motion-28903948.jpeg?auto=compress&cs=tinysrgb&h=900&fit=crop&w=1600";
+---
+<div class="video-scene">
+  <video
+    class="hero-video"
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="metadata"
+    poster={poster}
+  >
+    <source src={videoSrc} type="video/mp4" />
+  </video>
+</div>
+
+<style>
+  .video-scene {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    background: linear-gradient(180deg, #6B8060 0%, #48583E 100%);
+  }
+  .hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+</style>
