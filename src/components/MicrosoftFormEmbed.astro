@@ -1,0 +1,63 @@
+---
+// Embeds a Microsoft Form in place of the custom contact form.
+// Microsoft Forms doesn't support custom fonts/layout — only a background
+// colour/image and optional header image via its own theme picker — so
+// this will look visibly like a Microsoft Forms widget inside a card that
+// otherwise matches the site. See README for how to build the form and
+// swap the embed URL below.
+const embedUrl = "<iframe width="640px" height="480px" src="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=q3YKq1mnL0e6mZMpL-y-Smpb89LiZz5BmEbPfbHuj55UMEM1QUJTOVlLWDQzWlgyTkwwNTEwQjNYWiQlQCN0PWcu&embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>";
+---
+<div class="ms-form-card">
+  {embedUrl.startsWith("PASTE-") ? (
+    <p class="ms-form-placeholder">
+      Microsoft Form not connected yet — build the form, grab its embed link,
+      and paste it into <code>src/components/MicrosoftFormEmbed.astro</code>.
+    </p>
+  ) : (
+    <iframe
+      title="Think Savvy contact form"
+      src={embedUrl}
+      class="ms-form-iframe"
+      frameborder="0"
+      marginwidth="0"
+      marginheight="0"
+      allowfullscreen
+      webkitallowfullscreen
+      mozallowfullscreen
+      msallowfullscreen
+    >
+      Loading…
+    </iframe>
+  )}
+</div>
+
+<style>
+  .ms-form-card {
+    background: var(--cream-soft);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    padding: 12px;
+    box-shadow: var(--shadow-soft);
+    overflow: hidden;
+  }
+  .ms-form-iframe {
+    width: 100%;
+    height: 900px;
+    border: none;
+    border-radius: var(--radius-md);
+    display: block;
+  }
+  .ms-form-placeholder {
+    padding: 24px;
+    color: var(--ink-soft);
+    font-size: 14px;
+  }
+  .ms-form-placeholder code {
+    background: #B06B451A;
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+  @media (max-width: 640px) {
+    .ms-form-iframe { height: 1100px; }
+  }
+</style>

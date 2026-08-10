@@ -4,6 +4,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import DuckHero from '../components/DuckHero.astro';
 import ContactForm from '../components/ContactForm.astro';
+import MicrosoftFormEmbed from '../components/MicrosoftFormEmbed.astro';
 ---
 <html lang="en-GB">
 <head>
@@ -26,7 +27,7 @@ import ContactForm from '../components/ContactForm.astro';
       <p class="hero-tagline">We handle the data. You handle the business.</p>
       <p class="hero-sub">
         Think Savvy transforms complex fleet data into robust, controlled managed processes
-        at scale. Keeping busy Fleet Operators compliant and moving.
+        at scale. Keeping busy fleet operations compliant and moving.
       </p>
       <div class="hero-actions">
         <a href="#contact" class="btn btn-primary">Get in touch</a>
@@ -236,7 +237,7 @@ import ContactForm from '../components/ContactForm.astro';
     <div class="wrap trust-inner">
       <div class="trust-item">
         <h3>Built for scale</h3>
-        <p>Both services are built to handle large, complex fleets — the bigger the operation, the more we can take off your plate.</p>
+        <p>All our services are built to handle large, complex fleets — the bigger the operation, the more we can take off your plate.</p>
       </div>
       <div class="trust-item">
         <h3>Specialist focus</h3>
@@ -263,7 +264,8 @@ import ContactForm from '../components/ContactForm.astro';
           Prefer to talk it through? Leave a phone number in the message and we'll call you instead.
         </p>
       </div>
-      <ContactForm />
+      <MicrosoftFormEmbed />
+      <!-- Swap back to <ContactForm /> above if you decide against the Microsoft Forms trial -->
     </div>
   </section>
 
