@@ -73,7 +73,7 @@ import MicrosoftFormEmbed from '../components/MicrosoftFormEmbed.astro';
   <section class="strip">
     <div class="wrap strip-inner">
       <p class="strip-line"><strong>We turn complex data</strong> into controlled, automated processes.</p>
-      <p class="strip-line"><strong>A smarter way to manage operational complexity</strong> — software-led, service-backed.</p>
+      <p class="strip-line"><strong>A smarter way to manage operational data complexity</strong> — software-led, service-backed.</p>
       <p class="strip-line"><strong>Scalable by technology.</strong> Supported by people.</p>
     </div>
   </section>
@@ -100,6 +100,12 @@ import MicrosoftFormEmbed from '../components/MicrosoftFormEmbed.astro';
           <span class="service-tag">Compliance</span>
           <h3>DVS Management</h3>
           <p>Direct Vision Standard applications and compliance, handled at scale for fleets operating in and around London.</p>
+          <span class="card-link">Learn more →</span>
+        </a>
+        <a href="#olicence-management" class="service-card">
+          <span class="service-tag">Compliance</span>
+          <h3>O' Licence Management</h3>
+          <p>Reduce operational risk with continuous daily auditing, with application management available as an additional service.</p>
           <span class="card-link">Learn more →</span>
         </a>
         <a href="#notifications" class="service-card">
@@ -152,25 +158,48 @@ import MicrosoftFormEmbed from '../components/MicrosoftFormEmbed.astro';
         <h2>Direct Vision Standard, handled at scale.</h2>
         <p>
           Operating in or around London? Non-compliance with the Direct Vision Standard carries
-          a fine of <strong>£500 per vehicle, per instance</strong> — a real and recurring risk
+          a fine of <strong>£550 per vehicle, per instance</strong> — a real and recurring risk
           for any fleet running in the M25 zone.
         </p>
         <p>
-          We manage the DVS application process for large fleets — bulk vehicle uploads,
-          tracking which vehicles need Progressive Safe System (PSS) proof of fitment from
-          your fitting partners, and keeping your compliance status current as your fleet changes.
+          Our primary offering is daily auditing of your fleet, with tailored email
+          notifications sent to key stakeholders, namely your Transport Managers and their
+          respective operations. When followed consistently, our process can help you
+          mitigate the risk of DVS fines from day one.
         </p>
         <p class="detail-note">
-          Scope depends on fleet size and vehicle mix — we're happy to talk through what's
-          involved for your fleet specifically.
+          We can also provide a separate DVS permit application service for fleets that
+          require support with permit applications and compliance. We're happy to talk
+          through what's involved for your fleet specifically.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- NOTIFICATIONS DETAIL -->
-  <section id="notifications" class="detail detail-a">
+  <!-- O'LICENCE DETAIL -->
+  <section id="olicence-management" class="detail detail-a">
     <div class="wrap detail-inner">
+      <div class="detail-copy">
+        <p class="eyebrow">O' Licence Management</p>
+        <h2>Your Operator Licence position, always in view.</h2>
+        <p>
+          We bring together the most pertinent Operator Licence information, giving you a
+          clear, easy-to-understand view of your compliance position and highlighting any
+          areas that may require attention.
+        </p>
+        <p class="detail-note">Areas we look at:</p>
+        <ul class="check-list">
+          <li>Vehicles are present and on the correct licence, conforming to the 28-day rule</li>
+          <li>Each Operating Centre kept within its authorised vehicle and trailer margin, comparing authorised capacity against actual operational numbers</li>
+          <li>The number of vehicles and Operating Centres overseen by each Transport Manager, as an early-warning indicator of potential capacity and compliance risk</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOTIFICATIONS DETAIL -->
+  <section id="notifications" class="detail detail-b">
+    <div class="wrap detail-inner detail-inner-reverse">
       <div class="detail-copy">
         <p class="eyebrow">Bespoke Fleet Notifications</p>
         <h2>The right data, to the right people, at the right time.</h2>
@@ -188,7 +217,7 @@ import MicrosoftFormEmbed from '../components/MicrosoftFormEmbed.astro';
   </section>
 
   <!-- BESPOKE SOLUTIONS DETAIL -->
-  <section id="bespoke-solutions" class="detail detail-b">
+  <section id="bespoke-solutions" class="detail detail-a">
     <div class="wrap detail-inner detail-inner-reverse">
       <div class="detail-copy">
         <p class="eyebrow">Bespoke Solutions</p>
@@ -196,8 +225,8 @@ import MicrosoftFormEmbed from '../components/MicrosoftFormEmbed.astro';
         <p>
           Our expertise extends beyond our core services. We design and deliver bespoke
           solutions for a wide range of fleet management requirements — from GOV APIs and
-          vehicle information services to slippage notifications, O' Licence management,
-          vehicle margin alerts and VTG plating certificates.
+          vehicle information services to slippage notifications, vehicle margin alerts
+          and VTG plating certificates.
         </p>
         <p>
           If you have a fleet data or process challenge that isn't covered here, we'd love
@@ -363,13 +392,6 @@ import MicrosoftFormEmbed from '../components/MicrosoftFormEmbed.astro';
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 24px;
-    }
-    .service-cards a:nth-child(4) {
-      grid-column: 1 / -1;
-      max-width: calc(33.333% - 16px);
-    }
-    @media (max-width: 1000px) {
-      .service-cards a:nth-child(4) { max-width: none; }
     }
     .service-card {
       display: block;
